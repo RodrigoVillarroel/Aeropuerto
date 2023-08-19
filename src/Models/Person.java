@@ -1,12 +1,14 @@
+package Models;
+
 public class Person {
     private int dni;
     private String fullName;
-    private String addres;
+    private String address;
 
-    public Person(int dni, String fullName, String addres) {
+    public Person(int dni, String fullName, String address) {
         setDni(dni);
         setFullName(fullName);
-	setAddres(addres);
+	    setAddress(address);
     }
 
     public int getDni() {
@@ -26,11 +28,20 @@ public class Person {
     }
 
     public String getAddress() {
-	return this.addres;
+	return this.address;
     }
 
-    public void setAddres(String addres) {
-	this.addres = addres;
+    public void setAddress(String address) {
+	this.address = address;
    }
 
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "dni=" + getDni() +
+                ", fullName='" + getFullName() + '\'' +
+                ", address='" + getAddress() + '\'' +
+                '}';
+    }
 }
