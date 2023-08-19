@@ -1,3 +1,5 @@
+package Models;
+
 public class Person {
     private int dni;
     private String fullName;
@@ -21,5 +23,13 @@ public class Person {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "dni=" + getDni() +
+                ", fullName='" + getFullName() + '\'' +
+                '}';
     }
 }
