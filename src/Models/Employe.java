@@ -1,10 +1,11 @@
 package Models;
 
 public class Employe extends Person {
-
+    // =========================== PROPERTIES ===================================
     private String workStation;
     private String identifierNumber;
 
+    // ========================== CONSTRUCTORS ==================================
     public Employe(String workStation, String identifierNumber,int dni, String fullName, String address) {
         super(dni,fullName,address);
         this.workStation = workStation;
@@ -13,6 +14,7 @@ public class Employe extends Person {
     }
 
 
+    // ======================= GETTERS & SETTERS ================================
 
     public String getWorkStation() {
         return workStation;
@@ -30,5 +32,14 @@ public class Employe extends Person {
         this.identifierNumber = identifierNumber;
     }
 
-
+    // ============================= METHODS ====================================
+    // ============================ OVERRIDES ===================================
+    // ============================ TO STRING ===================================
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "workStation='" + getWorkStation() + '\'' +
+                ", identifierNumber='" + getIdentifierNumber().concat(super.toString()) + '\'' +
+                '}';
+    }
 }

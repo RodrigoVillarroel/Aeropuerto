@@ -1,15 +1,21 @@
 package Models;
 
 public class Person {
+    // =========================== PROPERTIES ===================================
     private int dni;
     private String fullName;
     private String address;
 
+    // ========================== CONSTRUCTORS ==================================
     public Person(int dni, String fullName, String address) {
         setDni(dni);
         setFullName(fullName);
 	    setAddress(address);
     }
+    public Person() {
+    }
+
+    // ======================= GETTERS & SETTERS ================================
 
     public int getDni() {
         return dni;
@@ -34,6 +40,9 @@ public class Person {
     public void setAddress(String address) {
 	this.address = address;
    }
+    // ============================= METHODS ====================================
+    // ============================ OVERRIDES ===================================
+    // ============================ TO STRING ===================================
 
 
     @Override
