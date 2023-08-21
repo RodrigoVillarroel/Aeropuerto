@@ -92,13 +92,13 @@ public class Airplane {
 
     @Override
     public String toString() {
-        return "Airplane{" +
-                "identifying=" + getIdentifying() +
-                ", aeroline='" + getAeroline() + '\'' +
-                ", capacity=" + getCapacity() +
-                ", status='" + getStatus() + '\'' +
-                ", crew=" + getCrew() +
-                ", seats=" + getSeats() +
-                '}';
+        return "\nAIRPLANE[" +
+                "\nIdentifying:" + getIdentifying() +
+                ", \nAeroline:'" + getAeroline() + '\'' +
+                ", \nCapacity:" + getCapacity() +
+                ", \nStatus:'" + getStatus() + '\'' +
+                ", \nCrew:" + getCrew() +
+                ", \nSeats:" + getSeats() +
+                ']';
     }
 }

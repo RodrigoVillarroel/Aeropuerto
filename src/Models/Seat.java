@@ -5,16 +5,16 @@ public class Seat {
 
     private int number;
     private static int contNumber = 1;
-    private String klass;
+    private SeatClass seatClass;
     private String status;
     private Person person;
 
 
     // ========================== CONSTRUCTORS ==================================
 
-    public Seat(String klass) {
+    public Seat(SeatClass seatClass) {
         setNumber();
-        setKlass(klass);
+        setKlass(seatClass);
         setStatus("LIBRE");
     }
     public Seat() {}
@@ -23,8 +23,8 @@ public class Seat {
     public int getNumber() {return number;}
     public void setNumber() {this.number = getContNumber(); contNumber++;}
     public static int getContNumber() {return contNumber;}
-    public String getKlass() {return klass;}
-    public void setKlass(String klass) {this.klass = klass;}
+    public SeatClass getKlass() {return seatClass;}
+    public void setKlass(SeatClass seatClass) {this.seatClass = seatClass;}
     public String getStatus() {return status;}
     public void setStatus(String status) {this.status = status;}
     public Person getPerson() {return person;}
@@ -43,12 +43,12 @@ public class Seat {
 
     @Override
     public String toString() {
-        return "Seat{" +
-                "number=" + getNumber() +
-                ", klass='" + getKlass() + '\'' +
-                ", status='" + getStatus() + '\'' +
-                ", person='" + getPerson() + '\'' +
-                '}';
+        return "\nSEAT[" +
+                "\nNumber:" + getNumber() +
+                ", \nClass:'" + getKlass() + '\'' +
+                ", \nStatus:'" + getStatus() + '\'' +
+                ", \nPerson:'" + getPerson() + '\'' +
+                ']';
     }
 }
 

@@ -47,10 +47,10 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "dni=" + getDni() +
-                ", fullName='" + getFullName() + '\'' +
-                ", address='" + getAddress() + '\'' +
-                '}';
+        return "\nPERSON[" +
+                "\nDNI:" + getDni() +
+                ", \nFullName:'" + getFullName() + '\'' +
+                ", \nAddress:'" + getAddress() + '\'' +
+                ']';
     }
 }

@@ -37,9 +37,9 @@ public class Employe extends Person {
     // ============================ TO STRING ===================================
     @Override
     public String toString() {
-        return "Employe{" +
-                "workStation='" + getWorkStation() + '\'' +
-                ", identifierNumber='" + getIdentifierNumber().concat(super.toString()) + '\'' +
-                '}';
+        return "\nEMPLOYE[" +
+                " \nWorkStation:'" + getWorkStation() + '\'' +
+                ", \nIdentifierNumber:'" + getIdentifierNumber().concat(super.toString()) + '\'' +
+                ']';
     }
 }
