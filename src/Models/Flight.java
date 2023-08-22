@@ -1,5 +1,6 @@
 package Models;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Flight {
@@ -10,6 +11,7 @@ public class Flight {
     private String status;
     private Airplane airplane;
     private Date dateAndTime;
+    private ArrayList<Employe> crew;
     // ========================== CONSTRUCTORS ==================================
     public Flight(int identifier, String origin, String destination, String status, Airplane airplane, Date dateAndTime) {
         setIdentifier(identifier);
@@ -18,6 +20,7 @@ public class Flight {
         setStatus(status);
         setAirplane(airplane);
         setDateAndTime(dateAndTime);
+        setCrew(new ArrayList<Employe>());
     }
 
     public Flight() {
@@ -72,7 +75,10 @@ public class Flight {
         this.dateAndTime = dateAndTime;
     }
 
-    // ============================= METHODS ====================================
+    public ArrayList<Employe> getCrew() {return crew;}
+
+    public void setCrew(ArrayList<Employe> crew) {this.crew = crew;}
+// ============================= METHODS ====================================
     // ============================ OVERRIDES ===================================
     // ============================ TO STRING ===================================
 
@@ -84,6 +90,7 @@ public class Flight {
                 ", \nDestination:'" + getDestination() + '\'' +
                 ", \nStatus:'" + getStatus() + '\'' +
                 ", \nAirplane:" + getAirplane() +
+                ", \nCrew:" + getCrew() +
                 ", \nDateAndTime:" + getDateAndTime() +
                 ']';
     }

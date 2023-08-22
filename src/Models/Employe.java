@@ -8,12 +8,16 @@ public class Employe extends Person {
     // ========================== CONSTRUCTORS ==================================
     public Employe(String workStation, String identifierNumber,int dni, String fullName, String address) {
         super(dni,fullName,address);
-        this.workStation = workStation;
-        this.identifierNumber = identifierNumber;
+        setWorkStation(workStation);
+        setIdentifierNumber(identifierNumber);
 
     }
 
-
+    public Employe(Person person, String workStation, String identifierNumber) {
+        super(person.getDni(), person.getFullName(), person.getAddress());
+        setWorkStation(workStation);
+        setIdentifierNumber(identifierNumber);
+    }
     // ======================= GETTERS & SETTERS ================================
 
     public String getWorkStation() {

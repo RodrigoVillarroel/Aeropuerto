@@ -1,5 +1,7 @@
 package Models;
 
+import java.util.Objects;
+
 public class Person {
     // =========================== PROPERTIES ===================================
     private int dni;
@@ -52,5 +54,18 @@ public class Person {
                 ", \nFullName:'" + getFullName() + '\'' +
                 ", \nAddress:'" + getAddress() + '\'' +
                 ']';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return dni == person.dni;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dni);
     }
 }

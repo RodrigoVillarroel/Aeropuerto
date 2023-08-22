@@ -9,7 +9,6 @@ public class Airplane {
     private String aeroline;
     private int capacity;
     private String status;
-    private ArrayList<Employe> crew;
     private ArrayList<Seat> seats;
 
     // ========================== CONSTRUCTORS ==================================
@@ -19,17 +18,14 @@ public class Airplane {
         setAeroline(aeroline);
         setIdentifying(identifying);
         setStatus(status);
-        setCrew(new ArrayList<Employe>());
         setSeats(new ArrayList<Seat>());
     }
 
-    public Airplane(int identifying, String aeroline, int capacity, String status,
-                     ArrayList<Employe> crew, ArrayList<Seat> seats) {
+    public Airplane(int identifying, String aeroline, int capacity, String status, ArrayList<Seat> seats) {
         setCapacity(capacity);
         setAeroline(aeroline);
         setIdentifying(identifying);
         setStatus(status);
-        setCrew(crew);
         setSeats(seats);
     }
     public Airplane() {
@@ -69,14 +65,6 @@ public class Airplane {
         this.status = status;
     }
 
-    public ArrayList<Employe> getCrew() {
-        return crew;
-    }
-
-    public void setCrew(ArrayList<Employe> crew) {
-        this.crew = crew;
-    }
-
     public ArrayList<Seat> getSeats() {
         return seats;
     }
@@ -97,7 +85,6 @@ public class Airplane {
                 ", \nAeroline:'" + getAeroline() + '\'' +
                 ", \nCapacity:" + getCapacity() +
                 ", \nStatus:'" + getStatus() + '\'' +
-                ", \nCrew:" + getCrew() +
                 ", \nSeats:" + getSeats() +
                 ']';
     }
